@@ -31,6 +31,8 @@ These tiny observations confirm correctness and expose time/memory trade-offs. T
 
 **Second loop:** [the Pasta-like endomorphism experiment](004-pasta-endomorphism.md) checks a structural hypothesis on tiny public curves. Its six-point automorphism classes give an idealized constant-factor search-space discount, but this is known prior art and already reflected in published Vesta attack-cost estimates. The next loop must look for a distinct, precisely specified property or switch to a named defender-side cost question. Do not extrapolate from a small q to a production key size.
 
+**Third loop:** [fixed-base relations](005-fixed-base-relations.md) derives the exact birthday-collision law for a simple generic algorithm, then checks it on tiny synthetic groups with two versus six bases. It finds no base-count advantage for that algorithm; preprocessing and protocol-specific relations remain open questions.
+
 ## Other complexity targets from the top-five list
 
 1. **Halo 2 prover/verifier algorithms:** count field operations, multi-scalar multiplication work, memory, and proof size for a named subroutine. Compare with a verified implementation. [Halo 2 protocol](https://zcash.github.io/halo2/design/protocol.html).
@@ -45,4 +47,4 @@ These tiny observations confirm correctness and expose time/memory trade-offs. T
 - **Protocol-relevant implementation result:** matches a current Zcash specification and code path, with independent correctness checks and reproducible costs.
 - **Security finding:** demonstrates a concrete violation of a stated security property under real protocol conditions. This requires independent review and responsible disclosure before publication.
 
-**Current conclusion:** No new attack or production-curve weakness has been found. The completed work includes a tested generic baseline and a tested toy endomorphism check. The latter reproduces known structure; the next goal is a distinct hypothesis that could beat an already-accounted-for baseline or improve a defender algorithm without weakening it.
+**Current conclusion:** No new attack or production-curve weakness has been found. The completed work includes tested generic discrete-log, endomorphism, and fixed-base relation baselines. The next goal is a costed comparison of published preprocessing or multi-target algorithms for one named protocol relation, or a defender-side improvement with the same security properties.
