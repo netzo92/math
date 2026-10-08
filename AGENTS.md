@@ -1,4 +1,4 @@
-# Math Loop working rules
+# Math working rules
 
 Start with README.md, then read the note for the track you are changing. Keep each iteration scoped to one explicit mathematical question.
 

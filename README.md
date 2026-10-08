@@ -1,4 +1,4 @@
-# Math Loop
+# Math
 
 An open lab for algorithmic complexity and Zcash-related cryptography questions. Each iteration should leave behind a reproducible experiment, a careful claim, and a next question.
 
