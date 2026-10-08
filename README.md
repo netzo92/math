@@ -2,6 +2,10 @@
 
 An open lab for algorithmic complexity and Zcash-related cryptography questions. Each iteration should leave behind a reproducible experiment, a careful claim, and a next question.
 
+## Zcash-relevant complexity
+
+[Attack and defender complexity research](notes/003-zcash-relevant-complexity.md) guides the work for ZEC, including shielded transactions. The first lab compares three generic elliptic-curve discrete-log attacks on tiny public groups. It is a baseline for new complexity ideas, not an assessment of any wallet.
+
 ## Priorities
 
 [My top 5 problems](notes/priorities.md) sets the research order: elliptic-curve discrete logarithms, Halo 2 proof optimization, Pallas/Vesta curve arithmetic, elliptic-curve scalar multiplication, and hash-based post-quantum signatures. Each has a first measurable question and a next loop.
@@ -29,6 +33,7 @@ Python 3.11+; no third-party dependencies.
 python3 -m unittest discover -s tests
 python3 experiments/matrix_multiply.py
 python3 experiments/polynomial_eval.py
+python3 experiments/toy_ecdlp.py
 ```
 
 Start with the matrix multiplication cutoff question or propose a new problem in either track.

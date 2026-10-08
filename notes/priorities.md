@@ -1,6 +1,6 @@
 # My top 5 problems
 
-These are the owner's research priorities, in the order supplied. They are questions to investigate, not claims that a cryptographic assumption has failed or that an optimization is safe for Zcash. Each project needs a precise model, a baseline, an independently checked result, and a note describing what remains unproved.
+These are the owner's research priorities, in the order supplied. For the current goal, use the [Zcash-relevant complexity research plan](003-zcash-relevant-complexity.md) to distinguish attack complexity from defender performance. They are questions to investigate, not claims that a cryptographic assumption has failed or that an optimization is safe for Zcash. Each project needs a precise model, a baseline, an independently checked result, and a note describing what remains unproved.
 
 | Rank | Problem | What to optimize | Zcash relevance |
 | --- | --- | --- | --- |
@@ -14,7 +14,9 @@ These are the owner's research priorities, in the order supplied. They are quest
 
 **First question:** For explicitly chosen toy prime-order curves, how do generic attack time and memory scale with group order? State the threat model and compare measured work with the known algorithms before drawing any broader conclusion. Do not infer anything about production curve security from small examples. The [Halo 2 Book's elliptic-curve background](https://zcash.github.io/halo2/background/curves.html) describes the discrete-log assumption used in this area.
 
-**Next loop:** Define the toy groups and operation counter; implement exhaustive search and a second generic algorithm; check every recovered logarithm; report time and memory separately.
+**Result so far:** `experiments/toy_ecdlp.py` implements exhaustive search and baby-step/giant-step on bounded toy curves. See the [first loop and its limits](003-zcash-relevant-complexity.md).
+
+**Next loop:** Map the exact ZEC shielded-pool group and spend-authorization call path in current protocol and source, then choose a precise hypothesis.
 
 ## 2. Halo 2 proof optimization
 
