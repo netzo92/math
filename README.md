@@ -2,6 +2,10 @@
 
 An open lab for algorithmic complexity and Zcash-related cryptography questions. Each iteration should leave behind a reproducible experiment, a careful claim, and a next question.
 
+## Priorities
+
+[My top 5 problems](notes/priorities.md) sets the research order: elliptic-curve discrete logarithms, Halo 2 proof optimization, Pallas/Vesta curve arithmetic, elliptic-curve scalar multiplication, and hash-based post-quantum signatures. Each has a first measurable question and a next loop.
+
 ## Tracks
 
 - [Matrix multiplication](notes/001-matrix-multiplication.md): classical versus Strassen, operation counts versus measured time.

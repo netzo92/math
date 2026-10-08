@@ -1,5 +1,7 @@
 # Zcash cryptography questions
 
+The owner's current ranked agenda is [My top 5 problems](priorities.md). The questions below remain starter exercises and may support those priorities.
+
 ## Question A: Orchard commitment-tree witness updates
 
 Orchard uses a fixed-depth 32 commitment tree, appends commitments in block order, and instantiates its Merkle hash with Sinsemilla. [Orchard Book: commitment tree](https://zcash.github.io/orchard/design/commitment-tree.html).
