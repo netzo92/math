@@ -4,7 +4,7 @@ An open lab for algorithmic complexity and Zcash-related cryptography questions.
 
 ## Zcash-relevant complexity
 
-[Attack and defender complexity research](notes/003-zcash-relevant-complexity.md) guides the work for ZEC, including shielded transactions. The first lab compares three generic elliptic-curve discrete-log attacks on tiny public groups. It is a baseline for new complexity ideas, not an assessment of any wallet.
+[Attack and defender complexity research](notes/003-zcash-relevant-complexity.md) guides the work for ZEC, including shielded transactions. The first lab compares three generic elliptic-curve discrete-log attacks on tiny public groups. [The second lab](notes/004-pasta-endomorphism.md) checks a known Pasta-like endomorphism on tiny curves and explains why it is already included in published attack-cost estimates. These are baselines for new complexity ideas, not an assessment of any wallet.
 
 ## Priorities
 
@@ -34,6 +34,7 @@ python3 -m unittest discover -s tests
 python3 experiments/matrix_multiply.py
 python3 experiments/polynomial_eval.py
 python3 experiments/toy_ecdlp.py
+python3 -m experiments.toy_endomorphism
 ```
 
 Start with the matrix multiplication cutoff question or propose a new problem in either track.

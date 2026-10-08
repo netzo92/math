@@ -29,7 +29,7 @@ The [Halo 2 Book](https://zcash.github.io/halo2/background/curves.html) describe
 
 These tiny observations confirm correctness and expose time/memory trade-offs. They are not production security estimates. At these sizes, rho's overhead and restarts can outweigh its memory advantage.
 
-**Next research loop:** derive the baseline costs and lower-bound assumptions on paper; select one structural hypothesis about a specific curve or representation; state a falsifiable improvement criterion; build an independently checked implementation on public synthetic inputs. Do not extrapolate from a small q to a production key size.
+**Second loop:** [the Pasta-like endomorphism experiment](004-pasta-endomorphism.md) checks a structural hypothesis on tiny public curves. Its six-point automorphism classes give an idealized constant-factor search-space discount, but this is known prior art and already reflected in published Vesta attack-cost estimates. The next loop must look for a distinct, precisely specified property or switch to a named defender-side cost question. Do not extrapolate from a small q to a production key size.
 
 ## Other complexity targets from the top-five list
 
@@ -45,4 +45,4 @@ These tiny observations confirm correctness and expose time/memory trade-offs. T
 - **Protocol-relevant implementation result:** matches a current Zcash specification and code path, with independent correctness checks and reproducible costs.
 - **Security finding:** demonstrates a concrete violation of a stated security property under real protocol conditions. This requires independent review and responsible disclosure before publication.
 
-**Current conclusion:** No new attack or production-curve weakness has been found. The completed work is a tested generic baseline. The next goal is a precise hypothesis that could beat a relevant baseline or improve a defender algorithm without weakening it.
+**Current conclusion:** No new attack or production-curve weakness has been found. The completed work includes a tested generic baseline and a tested toy endomorphism check. The latter reproduces known structure; the next goal is a distinct hypothesis that could beat an already-accounted-for baseline or improve a defender algorithm without weakening it.
